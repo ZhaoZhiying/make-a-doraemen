@@ -6,11 +6,11 @@
 .wrapper{
     position: absolute;
     left: 50%;
-    top: 50%;
-    -webkit-transform: translateX(-50%) translateY(-50%); /*谷歌*/
-    -moz-transform: translateX(-50%) translateY(-50%); /*火狐*/
-    -ms-transform: translateX(-50%) translateY(-50%); /*IE*/
-    transform: translateX(-50%) translateY(-50%);
+    top: 100px;
+    -webkit-transform: translateX(-50%); /*谷歌*/
+    -moz-transform: translateX(-50%); /*火狐*/
+    -ms-transform: translateX(-50%); /*IE*/
+    transform: translateX(-50%);
 }
 .head{
     border: 2px #333 solid;
