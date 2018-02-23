@@ -21,7 +21,6 @@
     position: relative;
     z-index: -1;
 }
-
 .eye-left,.eye-right{
     border: 2px #333 solid;
     width: 60px;
@@ -263,7 +262,6 @@
     -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     bottom: 0;
-    overflow: hidden;
     z-index: 2;
 }
 .mouse-shade{
@@ -278,6 +276,23 @@
     position: absolute;
     top: 114px;
     z-index: 4;
+}
+.tongue-wrapper{
+    border: 2px #333 transparent;
+    height: 150px;
+    width: 240px;
+    background: #E80016;
+    border-bottom-left-radius: 50% 100%;
+    border-bottom-right-radius: 50% 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    overflow: hidden;
+    bottom: 0;
+    z-index: 2;
 }
 .tongue-left,.tongue-right{
     border: 2px solid #333;
