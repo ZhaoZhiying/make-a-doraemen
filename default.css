@@ -1,0 +1,416 @@
+*{
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+html{
+    background: #ddd; 
+}
+.code-wrapper{
+    width: 50%;
+    height: 100vh;
+    padding: 16px 8px 16px 16px;
+}
+.code-wrapper{
+    position: fixed;
+    left: 0;
+}
+.code{
+    overflow: hidden;
+}
+.paper{
+    position: fixed;
+    right: 0;
+    padding: 16px 16px 16px 8px;
+}
+.wrapper{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+}
+/* head */
+.head{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    z-index: -1;
+}
+.head .eye-left,.head .eye-right{
+    position: absolute;
+    top: 6px;
+    z-index: 6;
+}
+.head .eye-left{
+    right: 49%;
+}
+.head .eye-right{
+    left: 49.5%;
+}
+.head .eyeball-left,.head .eyeball-right{
+    position: absolute;
+    top: 30px;
+    right: 3px;
+}
+@keyframes move{
+    11%{top:30px;right:3px;}
+    22%{top:45px;right:6px}
+    33%{top:57px;right:20px;}  
+    44%{top:45px;right:32px;}
+    55%{top:30px;right:35px;}
+    66%{top:45px;right:32px;}  
+    77%{top:57px;right:20px;}
+    88%{top:45px;right:6px}
+    99%{top:30px;right:3px;}
+}
+.head .face{
+    position: absolute;
+    top: 60px;
+    left: 19px; 
+    z-index: 1;
+}
+.head .nose{
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    z-index: 3;
+}
+.head .nose>.nose-light{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.head .lips-left,.head .lips-right{
+    position: absolute;
+    top: 60px;
+    z-index: 3;
+}
+.head .lips-left{
+    left: -15px;
+    transform: rotate(14deg);
+    -webkit-transform: rotate(14deg);
+}
+.head .lips-right{
+    right: -15px;
+    transform: rotate(-14deg);
+    -webkit-transform: rotate(-14deg);
+}
+.head .lips-center-wrapper{
+    position: absolute;
+    top: 118px;
+    left: 55px;
+    overflow: hidden; 
+    z-index: 6;  
+}
+.head .lips-center{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+}
+.head .lips-center-left-wrapper,.head .lips-center-right-wrapper{
+    position: absolute;
+    top: 114px;
+    overflow: hidden;
+    z-index: 3;
+}
+.head .lips-center-left-wrapper{
+    left: 20px;
+}
+.head .lips-center-right-wrapper{
+    right: 20px;
+}
+.head .lips-center-left,.lips-center-right{
+    position: absolute;
+    top: -4px;
+    z-index: 6;
+}
+.head .lips-center-left{
+    left: -9px;
+    transform: rotate(-2deg);
+    -webkit-transform: rotate(-2deg);
+}
+.head .lips-center-right{
+    right: -10px;
+    transform: rotate(2deg);
+    -webkit-transform: rotate(2deg);
+}
+.head .mustache-left1,.head .mustache-left2,.head .mustache-left3,
+.head .mustache-right1,.head .mustache-right2,.head .mustache-right3{
+    position: absolute;
+    z-index: 5;
+}
+.head .mustache-left1{
+    top: 50px;
+    left: 22px;
+    transform: rotate(18deg);
+    -webkit-transform: rotate(18deg);
+}
+.head .mustache-left2{
+    top: 75px;
+    left: 20px;
+}
+.head .mustache-left3{
+    top: 100px;
+    left: 22px;
+    transform: rotate(-18deg);
+    -webkit-transform: rotate(-18deg);
+}
+.head .mustache-right1{
+    top: 50px;
+    right: 22px;
+    transform: rotate(-18deg);
+    -webkit-transform: rotate(-18deg);
+}
+.head .mustache-right2{
+    top: 75px;
+    right: 20px;
+}
+.head .mustache-right3{
+    top: 100px;
+    right: 22px;
+    transform: rotate(18deg);
+    -webkit-transform: rotate(18deg);
+}
+.head .mustache-center{
+    position: absolute;
+    top: 62px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    z-index: 5;
+}
+.head .mouse-wrapper{
+    position: absolute;
+    bottom: 6px;
+    left: 15px;
+    overflow: hidden;
+}
+.head .mouse{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    z-index: 2;
+}
+.head .mouse-shade{
+    position: absolute;
+    top: 114px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    z-index: 4;
+}
+.head .tongue-wrapper{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    overflow: hidden;
+    bottom: 0;
+    z-index: 2;
+}
+.head .tongue-left,.head .tongue-right{
+    position: absolute;
+    bottom: -16px;
+    z-index: 10;
+}
+.head .tongue-left{
+    left: 50px;;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+.head .tongue-right{
+    right: 50px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+.head .tongue-shade{
+    position: absolute;
+    bottom: -19px;   
+    left: 52px;;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    z-index: 10;
+}
+/*body*/
+.body{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    width: 310px;
+    height: 310px;
+}
+.body .bell-rope-wrapper{
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    overflow: hidden;
+}
+.body .bell-rope-top, .body .bell-rope-bottom, .body .bell-rope-fill{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+}
+.body .bell-rope-top{
+    bottom: 20px;
+    z-index: 7;
+}
+.body .bell-rope-bottom{
+    bottom: 0;
+}
+.body .bell-rope-fill{
+    bottom: 2px;
+}
+.body .bell{
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    overflow: hidden;
+}
+.body .bell-inside-rope-top, .body .bell-inside-rope-bottom{
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+}
+.body .bell-inside-rope-top{
+    top: 10px;
+}
+.body .bell-inside-rope-bottom{
+    top: 16px;
+}
+.body .bell-inside-circle{
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+}
+.body .bell-inside-circle-rope{
+    position: absolute;
+    top: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+}
+.body .tripe-wrapper{
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    z-index: -2;
+}
+.body .tripe{
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+}
+.body .tripe-pocket{
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    border-top: none;
+    z-index: 9;
+}
+.body .tripe-pocket-top-wrapper{
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    overflow: hidden;
+}
+.body .tripe-pocket-top{
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+}
+.body .arm-left, .body .arm-right{
+    position: absolute;
+    top: -10px;
+    z-index: -4;
+}
+.body .arm-left{
+    transform: rotate(-30deg);
+    left: -4px;
+}
+.body .arm-right{
+    transform: rotate(30deg);
+    right: -4px;
+}
+.body .hand-left, .body .hand-right{
+    position: absolute;
+    top: 16px;
+}
+.body .hand-left{
+    left: -26px;
+}
+.body .hand-right{
+    right: -26px;
+}
+.body .leg-left, .body .leg-right{
+    position: absolute;
+    top: 140px;
+}
+.body .leg-left{
+    right: 56%;
+}
+.body .leg-right{
+    left: 56%;
+    border-top: none;
+    border-left: none;
+}
+.body .crotch-wrapper{
+    position: absolute;
+    top: 170px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    overflow: hidden;
+    z-index: 9;
+}
+.body .crotch{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    z-index: 9;
+}
+.body .foot-left, .body .foot-right{
+    position: absolute;
+    top: 184px;
+    z-index: -3;
+}
+.body .foot-left{
+    right: 53%;
+    transform: rotate(-6deg);
+    -webkit-transform: rotate(-6deg);
+}
+.body .foot-right{
+    left: 54%;
+    transform: rotate(6deg);
+    -webkit-transform: rotate(6deg);
+}
