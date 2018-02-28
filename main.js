@@ -10,7 +10,7 @@ let domCode = document.querySelector('#code')
         if(n >= code.length){
             window.clearInterval(id)
         }
-}, 10)
+}, 30)
 
 var result = `/*  
  * 我将用纯 css 来画一只哆啦A梦
@@ -21,10 +21,6 @@ var result = `/*
     height: 100%;
     padding: 16px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
-}
-.paper{
-    width: 50%;
-    height: 100vh;  
 }
 .doraemen{
     width: 100%;

@@ -10,8 +10,6 @@ html{
     width: 50%;
     height: 100vh;
     padding: 16px 8px 16px 16px;
-}
-.code-wrapper{
     position: fixed;
     left: 0;
 }
@@ -19,6 +17,8 @@ html{
     overflow: hidden;
 }
 .paper{
+    width: 50%;
+    height: 100vh;
     position: fixed;
     right: 0;
     padding: 16px 16px 16px 8px;
