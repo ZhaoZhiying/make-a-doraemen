@@ -10,7 +10,7 @@ let domCode = document.querySelector('#code')
         if(n >= code.length){
             window.clearInterval(id)
         }
-}, 30)
+}, 20)
 
 var result = `/*  
  * 我将用纯 css 来画一只哆啦A梦

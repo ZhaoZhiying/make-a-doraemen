@@ -319,7 +319,7 @@ html{
 .body .tripe{
     border-radius: 50%;
     position: absolute;
-    top: 20px;
+    top: 10px;
     left: 50%;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
