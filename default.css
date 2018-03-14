@@ -23,7 +23,7 @@ html{
     right: 0;
     padding: 16px 16px 16px 8px;
 }
-.wrapper{
+.doraemen{
     width: 100%;
     height: 100%;
     position: relative;
@@ -33,25 +33,25 @@ html{
     -webkit-transform: translateX(-50%);
 }
 /* head */
-.head{
+.doraemen-head{
     position: relative;
     left: 50%;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     z-index: -1;
 }
-.head .eye-left,.head .eye-right{
+.doraemen-head__eye--l,.doraemen-head__eye--r{
     position: absolute;
     top: 6px;
     z-index: 6;
 }
-.head .eye-left{
+.doraemen-head__eye--l{
     right: 49%;
 }
-.head .eye-right{
+.doraemen-head__eye--r{
     left: 49.5%;
 }
-.head .eyeball-left,.head .eyeball-right{
+.doraemen-head__eye--l__eyeball,.doraemen-head__eye--r__eyeball{
     position: absolute;
     top: 30px;
     right: 3px;
@@ -67,13 +67,13 @@ html{
     88%{top:45px;right:6px}
     99%{top:30px;right:3px;}
 }
-.head .face{
+.doraemen-head__face{
     position: absolute;
     top: 60px;
     left: 19px; 
     z-index: 1;
 }
-.head .nose{
+.doraemen-head__face__nose{
     position: absolute;
     top: 18px;
     left: 50%;
@@ -81,104 +81,50 @@ html{
     -webkit-transform: translateX(-50%);
     z-index: 3;
 }
-.head .nose>.nose-light{
+.doraemen-head__face__nose-light{
     position: absolute;
     right: 10px;
     top: 10px;
 }
-.head .lips-left,.head .lips-right{
-    position: absolute;
-    top: 60px;
-    z-index: 3;
-}
-.head .lips-left{
-    left: -15px;
-    transform: rotate(14deg);
-    -webkit-transform: rotate(14deg);
-}
-.head .lips-right{
-    right: -15px;
-    transform: rotate(-14deg);
-    -webkit-transform: rotate(-14deg);
-}
-.head .lips-center-wrapper{
-    position: absolute;
-    top: 118px;
-    left: 55px;
-    overflow: hidden; 
-    z-index: 6;  
-}
-.head .lips-center{
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-}
-.head .lips-center-left-wrapper,.head .lips-center-right-wrapper{
-    position: absolute;
-    top: 114px;
-    overflow: hidden;
-    z-index: 3;
-}
-.head .lips-center-left-wrapper{
-    left: 20px;
-}
-.head .lips-center-right-wrapper{
-    right: 20px;
-}
-.head .lips-center-left,.lips-center-right{
-    position: absolute;
-    top: -4px;
-    z-index: 6;
-}
-.head .lips-center-left{
-    left: -9px;
-    transform: rotate(-2deg);
-    -webkit-transform: rotate(-2deg);
-}
-.head .lips-center-right{
-    right: -10px;
-    transform: rotate(2deg);
-    -webkit-transform: rotate(2deg);
-}
-.head .mustache-left1,.head .mustache-left2,.head .mustache-left3,
-.head .mustache-right1,.head .mustache-right2,.head .mustache-right3{
+/* 胡须 */
+.doraemen-head__face__mustache--l1, .doraemen-head__face__mustache--l2, .doraemen-head__face__mustache--l3,
+.doraemen-head__face__mustache--r1, .doraemen-head__face__mustache--r2, .doraemen-head__face__mustache--r3{
     position: absolute;
     z-index: 5;
 }
-.head .mustache-left1{
+.doraemen-head__face__mustache--l1{
     top: 50px;
     left: 22px;
     transform: rotate(18deg);
     -webkit-transform: rotate(18deg);
 }
-.head .mustache-left2{
+.doraemen-head__face__mustache--l2{
     top: 75px;
     left: 20px;
 }
-.head .mustache-left3{
+.doraemen-head__face__mustache--l3{
     top: 100px;
     left: 22px;
     transform: rotate(-18deg);
     -webkit-transform: rotate(-18deg);
 }
-.head .mustache-right1{
+.doraemen-head__face__mustache--r1{
     top: 50px;
     right: 22px;
     transform: rotate(-18deg);
     -webkit-transform: rotate(-18deg);
 }
-.head .mustache-right2{
+.doraemen-head__face__mustache--r2{
     top: 75px;
     right: 20px;
 }
-.head .mustache-right3{
+.doraemen-head__face__mustache--r3{
     top: 100px;
     right: 22px;
     transform: rotate(18deg);
     -webkit-transform: rotate(18deg);
 }
-.head .mustache-center{
+.doraemen-head__face__mustache--c{
     position: absolute;
     top: 62px;
     left: 50%;
@@ -186,13 +132,69 @@ html{
     -webkit-transform: translateX(-50%);
     z-index: 5;
 }
-.head .mouse-wrapper{
+/* 嘴巴 */
+.doraemen-head__face__lips--l,.doraemen-head__face__lips--r{
+    position: absolute;
+    top: 60px;
+    z-index: 3;
+}
+.doraemen-head__face__lips--l{
+    left: -15px;
+    transform: rotate(14deg);
+    -webkit-transform: rotate(14deg);
+}
+.doraemen-head__face__lips--r{
+    right: -15px;
+    transform: rotate(-14deg);
+    -webkit-transform: rotate(-14deg);
+}
+.doraemen-head__face__lips--c{
+    position: absolute;
+    top: 118px;
+    left: 55px;
+    overflow: hidden; 
+    z-index: 6;  
+}
+.doraemen-head__face__lips--c-inner{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+}
+.doraemen-head__face__lips--c--l,.doraemen-head__face__lips--c--r{
+    position: absolute;
+    top: 114px;
+    overflow: hidden;
+    z-index: 3;
+}
+.doraemen-head__face__lips--c--l{
+    left: 20px;
+}
+.doraemen-head__face__lips--c--r{
+    right: 20px;
+}
+.doraemen-head__face__lips--c--l-inner,.doraemen-head__face__lips--c--r-inner{
+    position: absolute;
+    top: -4px;
+    z-index: 6;
+}
+.doraemen-head__face__lips--c--l-inner{
+    left: -9px;
+    transform: rotate(-2deg);
+    -webkit-transform: rotate(-2deg);
+}
+.doraemen-head__face__lips--c--r-inner{
+    right: -10px;
+    transform: rotate(2deg);
+    -webkit-transform: rotate(2deg);
+}
+.doraemen-head__face__mouse{
     position: absolute;
     bottom: 6px;
     left: 15px;
     overflow: hidden;
 }
-.head .mouse{
+.doraemen-head__face__mouse-inner{
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -200,7 +202,7 @@ html{
     -webkit-transform: translateX(-50%);
     z-index: 2;
 }
-.head .mouse-shade{
+.doraemen-head__face__mouse-shade{
     position: absolute;
     top: 114px;
     left: 50%;
@@ -208,7 +210,7 @@ html{
     -webkit-transform: translateX(-50%);
     z-index: 4;
 }
-.head .tongue-wrapper{
+.doraemen-head__face__mouse-inner__tongue{
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -217,22 +219,22 @@ html{
     bottom: 0;
     z-index: 2;
 }
-.head .tongue-left,.head .tongue-right{
+.doraemen-head__face__mouse-inner__tongue--l,.doraemen-head__face__mouse-inner__tongue--r{
     position: absolute;
     bottom: -16px;
     z-index: 10;
 }
-.head .tongue-left{
+.doraemen-head__face__mouse-inner__tongue--l{
     left: 50px;;
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
 }
-.head .tongue-right{
+.doraemen-head__face__mouse-inner__tongue--r{
     right: 50px;
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
 }
-.head .tongue-shade{
+.doraemen-head__face__mouse-inner__tongue-shade{
     position: absolute;
     bottom: -19px;   
     left: 52px;;
@@ -241,7 +243,7 @@ html{
     z-index: 10;
 }
 /*body*/
-.body{
+.doraemen-body{
     position: relative;
     left: 50%;
     transform: translateX(-50%);
@@ -249,7 +251,7 @@ html{
     width: 310px;
     height: 310px;
 }
-.body .bell-rope-wrapper{
+.doraemen-body__bell-rope{
     position: absolute;
     top: -60px;
     left: 50%;
@@ -257,23 +259,23 @@ html{
     -webkit-transform: translateX(-50%);
     overflow: hidden;
 }
-.body .bell-rope-top, .body .bell-rope-bottom, .body .bell-rope-fill{
+.doraemen-body__bell-rope--t, .doraemen-body__bell-rope--b, .doraemen-body__bell-rope--fill{
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
 }
-.body .bell-rope-top{
+.doraemen-body__bell-rope--t{
     bottom: 20px;
     z-index: 7;
 }
-.body .bell-rope-bottom{
+.doraemen-body__bell-rope--b{
     bottom: 0;
 }
-.body .bell-rope-fill{
+.doraemen-body__bell-rope--fill{
     bottom: 2px;
 }
-.body .bell{
+.doraemen-body__bell{
     position: absolute;
     top: -12px;
     left: 50%;
@@ -281,34 +283,34 @@ html{
     -webkit-transform: translateX(-50%);
     overflow: hidden;
 }
-.body .bell-inside-rope-top, .body .bell-inside-rope-bottom{
+.doraemen-body__bell-inner1, .doraemen-body__bell-inner2{
     position: absolute;
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
 }
-.body .bell-inside-rope-top{
+.doraemen-body__bell-inner1{
     top: 10px;
 }
-.body .bell-inside-rope-bottom{
+.doraemen-body__bell-inner2{
     top: 16px;
 }
-.body .bell-inside-circle{
+.doraemen-body__bell__circle{
     position: absolute;
     top: 18px;
     left: 50%;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
 }
-.body .bell-inside-circle-rope{
+.doraemen-body__bell__circle-rope{
     position: absolute;
     top: 28px;
     left: 50%;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
 }
-.body .tripe-wrapper{
+.doraemen-body__tripe{
     position: absolute;
     top: -20px;
     left: 50%;
@@ -316,7 +318,7 @@ html{
     -webkit-transform: translateX(-50%);
     z-index: -2;
 }
-.body .tripe{
+.doraemen-body__tripe--fill{
     border-radius: 50%;
     position: absolute;
     top: 10px;
@@ -324,7 +326,7 @@ html{
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
 }
-.body .tripe-pocket{
+.doraemen-body__tripe-pocket{
     position: absolute;
     top: 80px;
     left: 50%;
@@ -333,7 +335,7 @@ html{
     border-top: none;
     z-index: 9;
 }
-.body .tripe-pocket-top-wrapper{
+.doraemen-body__tripe-pocket--t{
     position: absolute;
     top: 80px;
     left: 50%;
@@ -341,49 +343,49 @@ html{
     -webkit-transform: translateX(-50%);
     overflow: hidden;
 }
-.body .tripe-pocket-top{
+.doraemen-body__tripe-pocket--t-open{
     position: absolute;
     top: -10px;
     left: 50%;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
 }
-.body .arm-left, .body .arm-right{
+.doraemen-body__arm--l, .doraemen-body__arm--r{
     position: absolute;
     top: -10px;
     z-index: -4;
 }
-.body .arm-left{
+.doraemen-body__arm--l{
     transform: rotate(-30deg);
     left: -4px;
 }
-.body .arm-right{
+.doraemen-body__arm--r{
     transform: rotate(30deg);
     right: -4px;
 }
-.body .hand-left, .body .hand-right{
+.doraemen-body__hand--l, .doraemen-body__hand--r{
     position: absolute;
     top: 16px;
 }
-.body .hand-left{
+.doraemen-body__hand--l{
     left: -26px;
 }
-.body .hand-right{
+.doraemen-body__hand--r{
     right: -26px;
 }
-.body .leg-left, .body .leg-right{
+.doraemen-body__leg--l, .doraemen-body__leg--r{
     position: absolute;
     top: 140px;
 }
-.body .leg-left{
+.doraemen-body__leg--l{
     right: 56%;
 }
-.body .leg-right{
+.doraemen-body__leg--r{
     left: 56%;
     border-top: none;
     border-left: none;
 }
-.body .crotch-wrapper{
+.doraemen-body__crotch{
     position: absolute;
     top: 170px;
     left: 50%;
@@ -392,24 +394,24 @@ html{
     overflow: hidden;
     z-index: 9;
 }
-.body .crotch{
+.doraemen-body__crotch-inner{
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     z-index: 9;
 }
-.body .foot-left, .body .foot-right{
+.doraemen-body__foot--l, .doraemen-body__foot--r{
     position: absolute;
     top: 184px;
     z-index: -3;
 }
-.body .foot-left{
+.doraemen-body__foot--l{
     right: 53%;
     transform: rotate(-6deg);
     -webkit-transform: rotate(-6deg);
 }
-.body .foot-right{
+.doraemen-body__foot--r{
     left: 54%;
     transform: rotate(6deg);
     -webkit-transform: rotate(6deg);

@@ -22,7 +22,7 @@ var result = `/*
     padding: 16px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
-.doraemen{
+.doraemen-wrapper{
     width: 100%;
     height: 100%;
     background: #fff;
@@ -34,7 +34,7 @@ var result = `/*
 * 先从头部画起
 */
 
-.head{
+.doraemen-head{
     border: 2px #333 solid;
     width: 310px;
     height: 310px;
@@ -44,14 +44,14 @@ var result = `/*
 
 /* 画眼睛 */
 
-.head .eye-left,.head .eye-right{
+.doraemen-head__eye--l,.doraemen-head__eye--r{
     border: 2px #333 solid;
     width: 60px;
     height: 80px;
     background: #fff;
     border-radius: 50%;
 }
-.head .eyeball-left,.head .eyeball-right{
+.doraemen-head__eye--l__eyeball,.doraemen-head__eye--r__eyeball{
     width: 17px;
     height: 17px;
     background: #000;
@@ -60,7 +60,7 @@ var result = `/*
 
 /* 画脸部 */
 
-.head .face{
+.doraemen-head__face{
     border: 2px #333 solid;
     height: 230px;
     width: 270px;
@@ -73,83 +73,85 @@ var result = `/*
 
 /*鼻子部分*/
 
-.head .nose{
+.doraemen-head__face__nose{
     border: 2px #333 solid;
     width: 44px;
     height: 44px;
     background: #D80617;
     border-radius: 50%;
 }
-.head .nose>.nose-light{
+.doraemen-head__face__nose-light{
     width: 10px;
     height: 10px;
     background: #fff;
     border-radius: 50%;
 }
 
+/* 胡须 */
+
+.doraemen-head__face__mustache--l1, .doraemen-head__face__mustache--l2, .doraemen-head__face__mustache--l3,
+.doraemen-head__face__mustache--r1, .doraemen-head__face__mustache--r2, .doraemen-head__face__mustache--r3{
+    width: 80px;
+    border: 1px #333 solid;
+}
+.doraemen-head__face__mustache--c{
+    height: 58px;
+    width: 2px;
+    background: #333;
+}
+
 /* 嘴巴部分 */
 
-.head .lips-left,.head .lips-right{
+.doraemen-head__face__lips--l,.doraemen-head__face__lips--r{
     border: 2px #333 solid;
     width: 44px;
     height: 64px;
     background: #fff;
 }
-.head .lips-left{
+.doraemen-head__face__lips--l{
     border-top-left-radius: 75% 50%;
     border-bottom-left-radius: 75% 50%;
     border-right: none;
 }
-.head .lips-right{
+.doraemen-head__face__lips--r{
     border-top-right-radius: 75% 50%;
     border-bottom-right-radius: 75% 50%;
     border-left: none;
 }
-.head .lips-center-wrapper{
+.doraemen-head__face__lips--c{
     width: 156px;
     height: 20px;
 }
-.head .lips-center{
+.doraemen-head__face__lips--c-inner{
     border: 2px #333 solid;
     height: 75px;
     width: 250px;
     border-top-left-radius: 65%;
     border-top-right-radius: 65%;
-    background: #E80016;
 }
-.head .lips-center-left-wrapper,.head .lips-center-right-wrapper{
+.doraemen-head__face__lips--c--l,.doraemen-head__face__lips--c--r{
     width: 36px;
     height: 20px;
 }
-.head .lips-center-left,.lips-center-right{
+.doraemen-head__face__lips--c--l-inner,.doraemen-head__face__lips--c--r-inner{
     border: 2px #333 solid;
     height: 20px;
     width: 65px;
     background: #fff;
 }
-.head .lips-center-left{
+.doraemen-head__face__lips--c--l-inner{
     border-bottom-left-radius: 45%;
     border-bottom-right-radius: 60%;
 }
-.head .lips-center-right{
+.doraemen-head__face__lips--c--r-inner{
     border-bottom-left-radius: 60%;
     border-bottom-right-radius: 45%;
 }
-.head .mustache-left1,.head .mustache-left2,.head .mustache-left3,
-.head .mustache-right1,.head .mustache-right2,.head .mustache-right3{
-    width: 80px;
-    border: 1px #333 solid;
-}
-.head .mustache-center{
-    height: 58px;
-    width: 2px;
-    background: #333;
-}
-.head .mouse-wrapper{
+.doraemen-head__face__mouse{
     width: 240px;
     height: 102px;
 }
-.head .mouse{
+.doraemen-head__face__mouse-inner{
     border: 2px #333 solid;
     height: 150px;
     width: 240px;
@@ -157,7 +159,10 @@ var result = `/*
     border-bottom-left-radius: 50% 100%;
     border-bottom-right-radius: 50% 100%;
 }
-.head .mouse-shade{
+.doraemen-head__face__lips--c-inner{
+    background: #E80016;
+}
+.doraemen-head__face__mouse-shade{
     height: 14px;
     width: 156px;
     background: #fff; 
@@ -165,28 +170,28 @@ var result = `/*
 
 /* 加上舌头 */
 
-.head .tongue-wrapper{
+.doraemen-head__face__mouse-inner__tongue{
     height: 150px;
     width: 240px;
     background: #E80016;
     border-bottom-left-radius: 50% 100%;
     border-bottom-right-radius: 50% 100%;
 }
-.head .tongue-left,.head .tongue-right{
+.doraemen-head__face__mouse-inner__tongue--l,.doraemen-head__face__mouse-inner__tongue--r{
     border: 2px solid #333;
     width: 80px;
     height: 60px;
     background: #EF6B1C;
 }
-.head .tongue-left{
+.doraemen-head__face__mouse-inner__tongue--l{
     border-top-left-radius: 50% 80%;
     border-top-right-radius: 50% 80%;
 }
-.head .tongue-right{
+.doraemen-head__face__mouse-inner__tongue--r{
     border-top-left-radius: 50% 80%;
     border-top-right-radius: 50% 80%;
 }
-.head .tongue-shade{
+.doraemen-head__face__mouse-inner__tongue-shade{
     width: 80px;
     height: 60px;
     background: #EF6B1C;
@@ -200,52 +205,52 @@ var result = `/*
 * 下面开始画身体
 */
 
-.body{
+.doraemen-body{
     width: 310px;
     height: 310px;
 }
 
 /* 先画个铃铛 */
 
-.body .bell-rope-wrapper{
+.doraemen-body__bell-rope{
     width: 214px;
     height: 60px;
 }
-.body .bell-rope-top, .body .bell-rope-bottom, .body .bell-rope-fill{
+.doraemen-body__bell-rope--t, .doraemen-body__bell-rope--b, .doraemen-body__bell-rope--fill{
     width: 420px;
     height: 310px;
     border-radius: 50%;
 }
-.body .bell-rope-top{
+.doraemen-body__bell-rope--t{
     border: 2px #333 solid;
 }
-.body .bell-rope-bottom{
+.doraemen-body__bell-rope--b{
     border: 2px #333 solid;
 }
-.body .bell-rope-fill{
+.doraemen-body__bell-rope--fill{
     border: 18px #D80617 solid;
 }
-.body .bell{
+.doraemen-body__bell{
     border: 2px #333 solid;
     width: 60px;
     height: 60px;
     background: #F4D601;
     border-radius: 50%;
 }
-.body .bell-inside-rope-top, .body .bell-inside-rope-bottom{
+.doraemen-body__bell-inner1, .doraemen-body__bell-inner2{
     border: 2px #333 solid;
     width: 120px;
     height: 100px;
     border-radius: 50%;
 }
-.body .bell-inside-circle{
+.doraemen-body__bell__circle{
     border: 2px solid #333;
     width: 12px;
     height: 12px;
     background: #fff;
     border-radius: 50%;
 }
-.body .bell-inside-circle-rope{
+.doraemen-body__bell__circle-rope{
     width: 2px;
     height: 20px;
     background: #333;
@@ -253,7 +258,7 @@ var result = `/*
 
 /* 画肚子 */
 
-.body .tripe-wrapper{
+.doraemen-body__tripe{
     border: 2px #333 solid;
     width: 240px;
     height: 210px;
@@ -264,7 +269,7 @@ var result = `/*
     border-bottom-right-radius: 55% 35%;
     border-bottom: none;
 }
-.body .tripe{
+.doraemen-body__tripe--fill{
     border: 2px #333 solid;
     width: 180px;
     height: 140px;
@@ -274,7 +279,7 @@ var result = `/*
 
 /* 叮当猫的口袋 */
 
-.body .tripe-pocket{
+.doraemen-body__tripe-pocket{
     border: 2px #333 solid;
     width: 140px;
     height: 60px;
@@ -282,11 +287,11 @@ var result = `/*
     border-bottom-right-radius: 45% 70%;
     border-top: none;
 }
-.body .tripe-pocket-top-wrapper{
+.doraemen-body__tripe-pocket--t{
     width: 140px;
     height: 14px;
 }
-.body .tripe-pocket-top{
+.doraemen-body__tripe-pocket--t-open{
     border: 2px #333 solid;
     width: 140px;
     height: 20px;
@@ -297,7 +302,7 @@ var result = `/*
 
 /* 胳膊 */
 
-.body .arm-left, .body .arm-right{
+.doraemen-body__arm--l, .doraemen-body__arm--r{
     border: 2px #333 solid;
     width: 100px;
     height: 50px;
@@ -307,7 +312,7 @@ var result = `/*
 
 /* 手 */
 
-.body .hand-left, .body .hand-right{
+.doraemen-body__hand--l, .doraemen-body__hand--r{
     border: 2px #333 solid;
     width: 50px;
     height: 50px;
@@ -317,29 +322,29 @@ var result = `/*
 
 /* 腿 */
 
-.body .leg-left, .body .leg-right{
+.doraemen-body__leg--l, .doraemen-body__leg--r{
     border: 2px #333 solid;
     background: #029DE2;
     width: 106px;
     height: 50px;
 }
-.body .leg-left{
+.doraemen-body__leg--l{
     border-top-left-radius: 15% 60%;
     border-bottom-left-radius: 30% 60%; 
     border-top: none;
     border-right: none;
 }
-.body .leg-right{
+.doraemen-body__leg--r{
     border-top-right-radius: 15% 60%;
     border-bottom-right-radius: 30% 60%; 
     border-top: none;
     border-left: none;
 }
-.body .crotch-wrapper{
+.doraemen-body__crotch{
     width: 38px;
     height: 20px;
 }
-.body .crotch{
+.doraemen-body__crotch-inner{
     border: 2px #333 solid;
     width: 40px;
     height: 50px; 
@@ -350,7 +355,7 @@ var result = `/*
 
 /* 脚 */
 
-.body .foot-left, .body .foot-right{
+.doraemen-body__foot--l, .doraemen-body__foot--r{
     border: 2px #333 solid;
     background: #fff;
     width: 126px;
@@ -366,7 +371,7 @@ var result = `/*
 * 再给眼睛加点动效吧
 */
 
-.head .eyeball-left,.head .eyeball-right{
+.doraemen-head__eye--l__eyeball, .doraemen-head__eye--r__eyeball{
     animation: move 6s ease infinite;
 }
 
