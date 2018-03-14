@@ -32,7 +32,7 @@ html{
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
 }
-/* head */
+/* 脑袋 */
 .doraemen-head{
     position: relative;
     left: 50%;
@@ -210,6 +210,7 @@ html{
     -webkit-transform: translateX(-50%);
     z-index: 4;
 }
+/* 舌头 */
 .doraemen-head__face__mouse-inner__tongue{
     position: absolute;
     left: 50%;
@@ -242,7 +243,7 @@ html{
     -webkit-transform: rotate(-45deg);
     z-index: 10;
 }
-/*body*/
+/* 身体 */
 .doraemen-body{
     position: relative;
     left: 50%;
@@ -251,6 +252,7 @@ html{
     width: 310px;
     height: 310px;
 }
+/* 铃铛 */
 .doraemen-body__bell-rope{
     position: absolute;
     top: -60px;
@@ -310,6 +312,7 @@ html{
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
 }
+/* 口袋 */
 .doraemen-body__tripe{
     position: absolute;
     top: -20px;
@@ -350,6 +353,7 @@ html{
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
 }
+/* 胳膊 */
 .doraemen-body__arm--l, .doraemen-body__arm--r{
     position: absolute;
     top: -10px;
@@ -363,6 +367,7 @@ html{
     transform: rotate(30deg);
     right: -4px;
 }
+/* 手 */
 .doraemen-body__hand--l, .doraemen-body__hand--r{
     position: absolute;
     top: 16px;
@@ -373,6 +378,7 @@ html{
 .doraemen-body__hand--r{
     right: -26px;
 }
+/* 腿 */
 .doraemen-body__leg--l, .doraemen-body__leg--r{
     position: absolute;
     top: 140px;
@@ -401,6 +407,7 @@ html{
     -webkit-transform: translateX(-50%);
     z-index: 9;
 }
+/* 脚 */
 .doraemen-body__foot--l, .doraemen-body__foot--r{
     position: absolute;
     top: 184px;
